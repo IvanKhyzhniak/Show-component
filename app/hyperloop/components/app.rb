@@ -4,17 +4,25 @@ class App < Hyperloop::Router
   
   history :browser
   
-  after_mount do
-    every(1) { force_update! }
-  end
+  #after_mount do
+  #  every(1) { force_update! }
+  #end
   
   route do
+    
+    #DIV(class: :hyperloophelloworld) do
+      #IMG(src: "assets/hyperloop-logo-medium-white.png")
+      #IMG src: "assets/kinopalats.jpeg"
+      #input(type: :checkbox, checked: :checked) 
+      
+      #DIV { "Now is #{`new Date().toLocaleString()`} is now".upcase}
 
-    DIV(class: :hyperloophelloworld) do
-      IMG(src: "assets/hyperloop-logo-medium-white.png")
-
-      DIV { "Hyperloop at your service! - The time is #{Time.now}" }
-
+      SECTION(class: 'todo-app') do
+        Header()
+        Route('/', exact: true) { Redirect('/all') }
+        Route('/:scope', mounts: Index)
+        Footer() unless Todo.count.zero?
+      end
       # add routes anywhere in this block... any route matching will be displayed
       # here are some samples (note you can mix Routes with other components)
 
@@ -23,6 +31,6 @@ class App < Hyperloop::Router
       # Route('/', exact: true) { Redirect('/all') } # or redirect to some other url
       # Route('/:scope', mounts: Index) # match /... and then mount Index passing the matched url segment as the scope param
       # See https://github.com/ruby-hyperloop/hyper-router for details
-    end
+   # end
   end
 end
