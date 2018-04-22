@@ -2,7 +2,7 @@
 class Index < Hyperloop::Router::Component
   render(SECTION, class: :main) do
     UL(class: 'todo-list') do
-      Todo.each do |todo|
+      Todo.sorted.each do |todo|
         TodoItem(todo: todo)
       end
     end
