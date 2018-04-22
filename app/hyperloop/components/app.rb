@@ -19,9 +19,8 @@ class App < Hyperloop::Router
 
       SECTION(class: 'todo-app') do
         Header()
-        Route('/', exact: true) { Redirect('/all') }
-        Route('/:scope', mounts: Index)
-        Footer() unless Todo.count.zero?
+        Index()
+        #Footer() unless Todo.count.zero?
       end
       # add routes anywhere in this block... any route matching will be displayed
       # here are some samples (note you can mix Routes with other components)

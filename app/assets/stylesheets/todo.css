@@ -17,13 +17,17 @@ body {
   font-smoothing: antialiased;
   font-weight: 300;
 }
-
+/*
 button,
 input[type="checkbox"] {
   outline: none;
 }
-
+*/
+.header {
+  width: min-content;
+}
 .todo-app {
+  width: min-content;
   background: #fff;
   margin: 130px 0 40px 0;
   position: relative;
@@ -175,8 +179,8 @@ li.todo-item .toggle:checked:after {
 li.todo-item label {
   white-space: pre-line;
   word-break: break-all;
-  padding: 15px 60px 15px 15px;
-  margin-left: 45px;
+  padding: 15px;
+/*  margin-left: 45px; */
   display: block;
   line-height: 1.2;
   transition: color 0.4s;
@@ -192,11 +196,10 @@ li.todo-item .destroy {
   position: absolute;
   text-decoration: none;
   top: 0;
-  right: 10px;
   bottom: 0;
   width: 40px;
   height: 40px;
-  margin: auto 0;
+  margin: 22px 86px;
   font-size: 30px;
   color: #cc9a9a;
   margin-bottom: 11px;
@@ -365,7 +368,7 @@ html .clear-completed:active {
   white-space: pre-line;
   word-break: break-all;
   padding: 15px 60px 15px 15px;
-  margin-left: 45px;
+ /* margin-left: 45px;*/
   display: block;
   line-height: 1.2;
   transition: color 0.4s;

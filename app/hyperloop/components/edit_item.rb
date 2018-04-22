@@ -8,10 +8,12 @@ class EditItem < Hyperloop::Component
 
   render do
     INPUT(
+      type: :time,
       class: params.className, 
       defaultValue: params.todo.title,
       key: params.todo.object_id,
-      placeholder: "What is left to do today?"
+      placeholder: "What is left to do today?",
+      style: {"padding-left": 16, width: "min-content"}
     ).on(:key_down) do |evt|
       next unless evt.key_code == 13
       params.todo.update(title: evt.target.value)
