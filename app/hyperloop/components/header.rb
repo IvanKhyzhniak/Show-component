@@ -1,9 +1,8 @@
-# app/hyperloop/components/header.
 class Header < Hyperloop::Component
-  state(:new_todo) { Todo.new }
+  state(:new_show) { Show.new }
   render(HEADER, class: :header) do
     H1 { 'shows' }
-    EditItem(class: 'new-todo', todo: state.new_todo)
-    .on(:save) { mutate.new_todo Todo.new }
+    EditItem(class: 'new-show', show: state.new_show)
+    .on(:save) { mutate.new_show Show.new }
   end
 end

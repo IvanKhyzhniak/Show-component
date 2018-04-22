@@ -21,7 +21,7 @@ body {
 .header {
   width: min-content;
 }
-.todo-app {
+.show-app {
   width: min-content;
   background: #fff;
   margin: 130px 0 40px 0;
@@ -30,25 +30,25 @@ body {
               0 25px 50px 0 rgba(0, 0, 0, 0.1);
 }
 
-.todo-app input::-webkit-input-placeholder {
+.show-app input::-webkit-input-placeholder {
   font-style: italic;
   font-weight: 300;
   color: #e6e6e6;
 }
 
-.todo-app input::-moz-placeholder {
+.show-app input::-moz-placeholder {
   font-style: italic;
   font-weight: 300;
   color: #e6e6e6;
 }
 
-.todo-app input::input-placeholder {
+.show-app input::input-placeholder {
   font-style: italic;
   font-weight: 300;
   color: #e6e6e6;
 }
 
-.todo-app h1 {
+.show-app h1 {
   position: absolute;
   top: -155px;
   width: 100%;
@@ -61,7 +61,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-.new-todo,
+.new-show,
 .edit {
   position: relative;
   margin: 0;
@@ -82,7 +82,7 @@ body {
   font-smoothing: antialiased;
 }
 
-.new-todo {
+.new-show {
   border: none;
   background: rgba(0, 0, 0, 0.003);
   box-shadow: inset 0 -2px 1px rgba(0,0,0,0.03);
@@ -118,35 +118,35 @@ label[for='toggle-all'] {
   color: #737373;
 }
 
-.todo-list {
+.show-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-li.todo-item {
+li.show-item {
   position: relative;
   font-size: 24px;
   border-bottom: 1px solid #ededed;
 }
 
-li.todo-item:last-child {
+li.show-item:last-child {
   border-bottom: none;
 }
 
-li.todo-item.editing {
+li.show-item.editing {
   border-bottom: none;
   padding: 0;
 }
 
-li.todo-item.editing .edit {
+li.show-item.editing .edit {
   display: block;
   width: 506px;
   padding: 13px 17px 12px 17px;
   margin: 0 0 0 43px;
 }
 
-li.todo-item .toggle {
+li.show-item .toggle {
   text-align: center;
   width: 40px;
   display:block;
@@ -161,15 +161,15 @@ li.todo-item .toggle {
   appearance: none;
 }
 
-li.todo-item .toggle:after {
+li.show-item .toggle:after {
   content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"><circle cx="50" cy="50" r="50" fill="none" stroke="#ededed" stroke-width="3"/></svg>');
 }
 
-li.todo-item .toggle:checked:after {
+li.show-item .toggle:checked:after {
   content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"><circle cx="50" cy="50" r="50" fill="none" stroke="#bddad5" stroke-width="3"/><path fill="#5dc2af" d="M72 25L42 71 27 56l-4 4 20 20 34-52z"/></svg>');
 }
 
-li.todo-item label {
+li.show-item label {
   white-space: pre-line;
   word-break: break-all;
   padding: 3px 19px;
@@ -177,12 +177,12 @@ li.todo-item label {
   transition: color 0.4s;
 }
 
-li.todo-item.completed label {
+li.show-item.completed label {
   color: #d9d9d9;
   text-decoration: line-through;
 }
 
-li.todo-item .destroy {
+li.show-item .destroy {
   line-height: 0
   position: absolute;
   text-decoration: none;
@@ -191,19 +191,19 @@ li.todo-item .destroy {
   transition: color 0.2s ease-out;
 }
 
-li.todo-item .destroy:hover {
+li.show-item .destroy:hover {
   color: #af5b5e;
 }
 
-li.todo-item .destroy:after {
+li.show-item .destroy:after {
   content: '×';
 }
 
-li.todo-item:hover .destroy {
+li.show-item:hover .destroy {
   display: inline;
 }
 
-li.todo-item.editing:last-child {
+li.show-item.editing:last-child {
   margin-bottom: -1px;
 }
 
@@ -230,12 +230,12 @@ li.todo-item.editing:last-child {
               0 17px 2px -6px rgba(0, 0, 0, 0.2);
 }
 
-.todo-count {
+.show-count {
   float: left;
   text-align: left;
 }
 
-.todo-count strong {
+.show-count strong {
   font-weight: 300;
 }
 
@@ -312,11 +312,11 @@ html .clear-completed:active {
 */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   .toggle-all,
-  li.todo-item .toggle {
+  li.show-item .toggle {
     background: none;
   }
 
-  li.todo-item .toggle {
+  li.show-item .toggle {
     height: 40px;
   }
 
@@ -338,7 +338,7 @@ html .clear-completed:active {
   }
 }
 
-.new_todo{
+.new_show{
     color: #777;
     text-align: center;
     padding-top:10px;
@@ -358,7 +358,7 @@ html .clear-completed:active {
   color: #777;
 }
 
-.todo_button{
+.show_button{
     border-image: none;
     border: none;
     background-color: inherit;
