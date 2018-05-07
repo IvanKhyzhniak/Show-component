@@ -3,7 +3,7 @@ class ShowItem < Hyperloop::Component
   state editing: false
   render(LI, class: 'show-item') do
     if state.editing
-      EditItem(show: params.show, className: :edit)
+      EditShow(show: params.show, className: :edit)
       .on(:save, :cancel) { mutate.editing false }
     else
       LABEL { params.show.time }

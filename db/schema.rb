@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180421091749) do
+ActiveRecord::Schema.define(version: 20180425145605) do
+
+  create_table "films", force: :cascade do |t|
+    t.string "title"
+    t.string "about"
+    t.string "poster"
+    t.integer "show_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["show_id"], name: "index_films_on_show_id"
+  end
 
   create_table "hyperloop_connections", force: :cascade do |t|
     t.string "channel"

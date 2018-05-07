@@ -1,12 +1,7 @@
-class App < Hyperloop::Router  
+class App < Hyperloop::Component 
 
-  history :browser
-  
-  render do 
-    SECTION(class: 'show-app') do
-      Header()
-      Index()
-    end
+  render(DIV) do
+    Shows()
+    #Films()
   end
-  
 end

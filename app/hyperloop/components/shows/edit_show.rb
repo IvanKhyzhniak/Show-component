@@ -1,11 +1,9 @@
-# app/hyperloop/components/edit_item.rb
-class EditItem < Hyperloop::Component
+class EditShow < Hyperloop::Component
   param :show
-  param :on_save, type: Proc               # add
-  param :on_cancel, type: Proc             # add
+  param :on_save, type: Proc                    
+  param :on_cancel, type: Proc             
   param :className
-  after_mount { Element[dom_node].focus }  # add
-
+  after_mount { Element[dom_node].focus }  
   
   render do
     INPUT(
@@ -18,7 +16,7 @@ class EditItem < Hyperloop::Component
     ).on(:key_down) do |evt|
       next unless (evt.key_code == 13 and evt.target.value != "")
       params.show.update(time: evt.target.value) 
-      params.on_save                       # add
+      params.on_save                       
     end
     .on(:blur) { params.on_cancel }
   end
